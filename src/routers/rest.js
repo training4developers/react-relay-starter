@@ -12,7 +12,7 @@ export default function(modelName) {
 	const collectionName = pluralize(modelName);
 	const router = express.Router();
 
-	return System.import(path.join(__dirname, `../mongoose/${collectionName}`)).then((DataModel) => {
+	return System.import(path.join(__dirname, `../mongoose/${modelName}`)).then((DataModel) => {
 
 		// collection uri
 		router.route("/" + collectionName)

@@ -13,18 +13,26 @@ export default function(config) {
 	mongoose
 		.connect(`mongodb://${config.mongoServer.host}:${config.mongoServer.port}/${config.mongoServer.dbName}`);
 
-	const app = express();
-	const server = http.createServer(app);
-	const graphqlHttpConfig = (schema) => ({ schema, pretty: true, graphiql: true });
+	let restRouters = [rest("widget")];
 
-	app.use('/graphql', graphqlHttp(graphqlHttpConfig(schema)));
+	return Promise.all(restRouters).then(widgetRouter => {
 
-	app.use("/api", bodyParser.json());
-	app.use("/api", accountRouter);
-	
-	//app.use('/libs', express.static(path.join(__dirname, '../node_modules')));
-	app.use(express.static(config.webServer.folder));
+		const app = express();
+		const server = http.createServer(app);
+		const graphqlHttpConfig = (schema) => ({ schema, pretty: true, graphiql: true });
 
-	server.listen(config.webServer.port, () =>
-		console.log(`web server running on port ${config.webServer.port}`));
+		app.use('/graphql', graphqlHttp(graphqlHttpConfig(schema)));
+
+		app.use("/api", bodyParser.json());
+		app.use("/api", widgetRouter);
+		
+		//app.use('/libs', express.static(path.join(__dirname, '../node_modules')));
+		app.use(express.static(config.webServer.folder));
+
+		server.listen(config.webServer.port, () =>
+			console.log(`web server running on port ${config.webServer.port}`));
+
+	}).catch(err => {
+		console.log(err.message || err);
+	});	
 }
