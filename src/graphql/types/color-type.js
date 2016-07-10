@@ -5,8 +5,8 @@ export const colorType = new GraphQLEnumType({
 	description: 'An enumeration of colors',
 	values: {
 		'red': { value: 'red', description: 'Red' },
-		'blue': { value: 'blue', description: 'Blue' },
+		'yellow': { value: 'yellow', description: 'Yellow' },
 		'green': { value: 'green', description: 'Green' },
-		'orange': { value: 'orange', description: 'Orange' }
+		'blue': { value: 'blue', description: 'Blue' }
 	}
 });
