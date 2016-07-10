@@ -12,13 +12,17 @@ Step 2. Download and Install MongoDB. To download MongoDB click [here](https://w
 
 Step 3. Download this repository from [here](https://github.com/training4developers/react-relay-starter/archive/master.zip). Extract the zip file to a working folder on your system.
 
-Step 4. Open a terminal window. From the terminal prompt, run the following command.
+Step 4. Open a terminal window. From the terminal prompt, run the following commands.
 
 ```bash
 $ ~/mongodb/bin/mongod --dbpath ~/mongodb/data/db
+
+$ ~/mongodb/bin/mongoimport -d bootcamp -c widgets --jsonArray ./widgets.json
 ```
 
-Update your paths to reflect where you installed **mongod** and to what your database path is. If you did not create a folder to store your database in, then create a folder and use that folder path for the **dbpath** value.
+Update your paths to reflect where you installed **mongod** and to what your database path is. If you did not create a folder to store your database in, then create a folder and use that folder path for the **dbpath** value. Also, update the path of **widget.json** to theextracted project folder.
+
+The MongoDB should now be up and running, and populated with sample data.
 
 Step 5. Open a new terminal window, change to the folder where you extracted the zip file. You should see a **package.json** file in the folder.
 
