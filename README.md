@@ -42,19 +42,19 @@ please use a new terminal window to run additional commands
 
 This terminal window is now running the web server, a second terminal window will need to be opened to run additional terminal commands.
 
-Step 5. Open a web browser, and navigate to [http://localhost:3000](http://localhost:3000).  The starter web application should load and be usable.
+Step 7. Open a web browser, and navigate to [http://localhost:3000](http://localhost:3000).  The starter web application should load and be usable.
 
 **To Modify the Web Application**
 
-Step 6. Open a new terminal window (do not use the same terminal window as the web server), change to the project folder.
+Step 8. Open a new terminal window (do not use the same terminal window as the web server), change to the project folder.
 
-Step 7. From the terminal, run the following command:
+Step 9. From the terminal, run the following command:
 
 ```bash
 $ npm run webpack
 ```
 
-Step 8. Open your favorite text editor (such as [Atom](https://atom.io/) or [Visual Studio Code](https://code.visualstudio.com)), and modify the files in the **src/www** folder. When file changes are saved, **webpack** will automatically transpile and bundle the application code and assets, and deploy it to the **dist** folder. To see the changes, reload your web browser.
+Step 10. Open your favorite text editor (such as [Atom](https://atom.io/) or [Visual Studio Code](https://code.visualstudio.com)), and modify the files in the **src/www** folder. When file changes are saved, **webpack** will automatically transpile and bundle the application code and assets, and deploy it to the **dist** folder. To see the changes, reload your web browser.
 
 Visual Studio Code supports TypeScript out of the box. Atom requires the 	**atom-typescript** package to be installed. To install it from the menu bar, go to Packages -> Settings View -> Install Packages/Themes. Search for **atom-typescript**, then click **Install**. Sometimes Atom will not be able to download the package because of proxy settings. To resolve this run the following commands from a terminal window, replacing the localhost URL with your proxy URL setting:
 
