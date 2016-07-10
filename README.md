@@ -1,4 +1,4 @@
-# React/Relay/GraphQL Stater Project
+# React/Relay/GraphQL Starter Project
 
 ## Overview
 
