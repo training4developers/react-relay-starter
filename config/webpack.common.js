@@ -61,7 +61,6 @@ module.exports = {
       // transpiles global SASS stylesheets
 			{
 			  test: /\.scss$/,
-        exclude: [ helpers.root('src','www','js') ],
 			  loaders: ['style','css','postcss','sass'] // loader order is executed right to left
 			}
     ]
