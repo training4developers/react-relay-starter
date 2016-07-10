@@ -56,7 +56,7 @@ $ npm run webpack
 
 Step 10. Open your favorite text editor (such as [Atom](https://atom.io/) or [Visual Studio Code](https://code.visualstudio.com)), and modify the files in the **src/www** folder. When file changes are saved, **webpack** will automatically transpile and bundle the application code and assets, and deploy it to the **dist** folder. To see the changes, reload your web browser.
 
-Visual Studio Code supports TypeScript out of the box. Atom requires the 	**atom-typescript** package to be installed. To install it from the menu bar, go to Packages -> Settings View -> Install Packages/Themes. Search for **atom-typescript**, then click **Install**. Sometimes Atom will not be able to download the package because of proxy settings. To resolve this run the following commands from a terminal window, replacing the localhost URL with your proxy URL setting:
+Visual Studio Code supports JSX out of the box. Atom requires the **react** package to be installed. To install it from the menu bar, go to Packages -> Settings View -> Install Packages/Themes. Search for **react**, then click **Install**. Sometimes Atom will not be able to download the package because of proxy settings. To resolve this run the following commands from a terminal window, replacing the localhost URL with your proxy URL setting:
 
 ```bash
 $ apm config set proxy "http://localhost:8080"
@@ -66,7 +66,9 @@ $ apm config set https_proxy "http://localhost:8080"
 $ apm config set strict-ssl false
 ```
 
-Restart Atom, then re-attempt to install the **atom-typescript** package again.
+Restart Atom, then re-attempt to install the **react** package again.
+
+JavaScript & HTML linting support can be added by installing the **linter**, **linter-htmlhint**, and **linter-eslint** packages.
 
 ## NPM Scripts Command Reference
 
