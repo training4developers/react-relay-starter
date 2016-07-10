@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLInt, GraphQLList, GraphQLString} from 'graphql';
+import { GraphQLObjectType, GraphQLID, GraphQLList, GraphQLString} from 'graphql';
 
 import { widgetType } from './widget-type';
 import { getUserWidgets } from '../../database';
@@ -8,7 +8,7 @@ export const userType = new GraphQLObjectType({
 	description: 'A user',
 	fields: () => ({
 		id: {
-			type: GraphQLInt,
+			type: GraphQLID,
 			description: 'The user id'
 		},
 		name: {

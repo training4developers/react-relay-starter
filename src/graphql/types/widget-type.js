@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLString, GraphQLInt } from 'graphql';
+import { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLID } from 'graphql';
 
 import { colorType } from './color-type';
 import { sizeType } from './size-type';
@@ -11,7 +11,7 @@ export const widgetType = new GraphQLObjectType({
 	description: 'A widget',
 	fields: () => ({
 		id: {
-			type: GraphQLString,
+			type: GraphQLID,
 			description: 'The widget id'
 		},
 		owner: {

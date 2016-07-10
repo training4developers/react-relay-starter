@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLInt, GraphQLString, GraphQLList } from 'graphql';
+import { GraphQLObjectType, GraphQLInt, GraphQLList, GraphQLID } from 'graphql';
 import { getWidget, getWidgets, getUser, getUsers } from '../../database';
 
 import { userType} from './user-type';
@@ -12,7 +12,7 @@ export const queryType = new GraphQLObjectType({
 			description: 'Get a widget by id',
 			args: {
 				id: {
-					type: GraphQLString,
+					type: GraphQLID,
 					description: 'Id of the widget to get'
 				}
 			},
@@ -28,7 +28,7 @@ export const queryType = new GraphQLObjectType({
 			description: 'Get a user by id',
 			args: {
 				id: {
-					type: GraphQLInt,
+					type: GraphQLID,
 					description: 'Id of the user to get'
 				}
 			},
