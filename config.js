@@ -1,5 +1,3 @@
-'use strict';
-
 // extracts the "webServer" property of the package.json file, and returns it
 // as an object for configuring the web server, and processing the webpack
 // files
